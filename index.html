@@ -10,287 +10,10 @@
     <!-- Font Awesome -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> -->
     <link rel="stylesheet" href="fontawesome/css/all.min.css" />
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      :root {
-        --primary-color: #4b0082; /* Purple */
-        --secondary-color: #228b22; /* Forest Green */
-        --accent-color: #ffd700; /* Gold */
-        --light-color: #add8e6; /* Light Blue */
-      }
-
-      body {
-        font-family: "Roboto", sans-serif;
-        color: #333;
-        background-color: #f9f9f9;
-        line-height: 1.6;
-      }
-
-      /*photo security*/
-      /* Make it harder to select and copy content */
-      body {
-        user-select: none;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-      }
-
-      /* Add a semi-transparent overlay pattern to images */
-      .protected-image {
-        position: relative;
-      }
-      .protected-image::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: repeating-linear-gradient(
-          45deg,
-          rgba(255, 255, 255, 0.1),
-          rgba(255, 255, 255, 0.1) 10px,
-          rgba(0, 0, 0, 0.1) 10px,
-          rgba(0, 0, 0, 0.1) 20px
-        );
-        pointer-events: none;
-      }
-
-      h1,
-      h2,
-      h3,
-      h4,
-      .display-font {
-        font-family: "Playfair Display", serif;
-        font-weight: 700;
-      }
-
-      .navbar {
-        background: linear-gradient(
-          135deg,
-          var(--primary-color),
-          var(--secondary-color)
-        );
-        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-      }
-
-      .navbar-brand {
-        font-family: "Playfair Display", serif;
-        font-weight: 700;
-        font-size: 1.8rem;
-        color: white !important;
-      }
-
-      .nav-link {
-        color: rgba(255, 255, 255, 0.9) !important;
-        font-weight: 500;
-        margin: 0 8px;
-        transition: all 0.3s;
-      }
-
-      .nav-link:hover {
-        color: var(--accent-color) !important;
-        transform: translateY(-2px);
-      }
-
-      .hero-section {
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-          url("https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
-        background-size: cover;
-        background-position: center;
-        color: white;
-        padding: 120px 0;
-        text-align: center;
-        position: relative;
-      }
-
-      .hero-section::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 20px;
-        background: linear-gradient(
-          to right,
-          var(--primary-color),
-          var(--secondary-color),
-          var(--accent-color)
-        );
-      }
-
-      .section-title {
-        position: relative;
-        margin-bottom: 40px;
-        color: var(--primary-color);
-        text-align: center;
-      }
-
-      .section-title:after {
-        content: "";
-        position: absolute;
-        bottom: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100px;
-        height: 4px;
-        background: linear-gradient(
-          to right,
-          var(--secondary-color),
-          var(--accent-color)
-        );
-      }
-
-      .family-section {
-        padding: 80px 0;
-      }
-
-      .family-section:nth-child(odd) {
-        background-color: rgba(173, 216, 230, 0.1);
-      }
-
-      .family-card {
-        border: none;
-        border-radius: 15px;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s;
-        margin-bottom: 30px;
-        overflow: hidden;
-        background: white;
-      }
-
-      .family-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-      }
-
-      .family-card-img {
-        height: 300px;
-        object-fit: cover;
-        width: 100%;
-      }
-
-      .family-card-body {
-        padding: 25px;
-      }
-
-      .generation-badge {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        background: var(--accent-color);
-        color: var(--primary-color);
-        font-weight: bold;
-        padding: 5px 10px;
-        border-radius: 20px;
-        font-size: 0.8rem;
-      }
-
-      .carousel-item img {
-        height: 500px;
-        object-fit: cover;
-        filter: brightness(0.9);
-      }
-
-      .carousel-caption {
-        background: rgba(70, 0, 110, 0.7);
-        border-radius: 10px;
-        padding: 20px;
-        bottom: 40px;
-      }
-
-      .bible-verse {
-        background: linear-gradient(135deg, var(--light-color), white);
-        border-left: 5px solid var(--secondary-color);
-        padding: 20px;
-        margin: 30px 0;
-        font-style: italic;
-        border-radius: 0 10px 10px 0;
-      }
-
-      .contact-form {
-        background-color: white;
-        padding: 30px;
-        border-radius: 15px;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-      }
-
-      .btn-family {
-        background: var(--primary-color);
-        color: white;
-        border: none;
-        padding: 10px 25px;
-        border-radius: 30px;
-        transition: all 0.3s;
-      }
-
-      .btn-family:hover {
-        background: var(--secondary-color);
-        color: white;
-        transform: translateY(-3px);
-      }
-
-      footer {
-        background: linear-gradient(
-          135deg,
-          var(--primary-color),
-          var(--secondary-color)
-        );
-        color: white;
-        padding: 50px 0 20px;
-      }
-
-      .social-icons a {
-        color: white;
-        font-size: 1.5rem;
-        margin: 0 10px;
-        transition: all 0.3s;
-      }
-
-      .social-icons a:hover {
-        color: var(--accent-color);
-        transform: translateY(-5px);
-      }
-
-      .family-tree {
-        position: relative;
-        padding: 40px 0;
-      }
-
-      .tree-connector {
-        position: absolute;
-        height: 100%;
-        width: 2px;
-        background: var(--secondary-color);
-        left: 50%;
-        top: 0;
-        z-index: 1;
-      }
-
-      .generation {
-        position: relative;
-        z-index: 2;
-        margin-bottom: 30px;
-      }
-
-      .timeline-img {
-        border: 5px solid white;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-      }
-
-      .encouragement-box {
-        background: linear-gradient(135deg, var(--light-color), white);
-        border-radius: 15px;
-        padding: 25px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        margin: 20px 0;
-      }
-    </style>
-  </head>
+     <!-- Google Fonts -->
+     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    </head>
   <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
@@ -1491,186 +1214,196 @@
 
     <!-- Custom JS -->
     <script>
-      // Contact form submission
-      document
-        .getElementById("familyContactForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-
-          // Get form values
-          const name = document.getElementById("contactName").value;
-          const email = document.getElementById("contactEmail").value;
-          const subject = document.getElementById("contactSubject").value;
-          const message = document.getElementById("contactMessage").value;
-
-          // Show success message
-          document
-            .getElementById("familySuccessMessage")
-            .classList.remove("d-none");
-
-          // Reset form
-          document.getElementById("familyContactForm").reset();
-
-          // Scroll to success message
-          document
-            .getElementById("familySuccessMessage")
-            .scrollIntoView({ behavior: "smooth" });
-
-          // In a real implementation, you would send the data to your email
-          console.log(
-            "Family message would be sent to: byaruhangaisamelk@gmail.com"
-          );
-          console.log("Name:", name);
-          console.log("Email:", email);
-          console.log("Subject:", subject);
-          console.log("Message:", message);
-        });
-
-      // Smooth scrolling for anchor links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-
-          document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior: "smooth",
-          });
-        });
-      });
-      //restriction on downloading photos
-      // Prevent image downloading
-      document.addEventListener("DOMContentLoaded", function () {
-        // Disable right-click on images
-        const allImages = document.querySelectorAll("img");
-        allImages.forEach((img) => {
-          // Add overlay div
-          const overlay = document.createElement("div");
-          overlay.style.position = "absolute";
-          overlay.style.top = "0";
-          overlay.style.left = "0";
-          overlay.style.width = "100%";
-          overlay.style.height = "100%";
-          overlay.style.zIndex = "1";
-          overlay.style.cursor = "not-allowed";
-
-          // Style the parent
-          img.parentNode.style.position = "relative";
-          img.parentNode.appendChild(overlay);
-
-          // Prevent right click
-          img.addEventListener("contextmenu", function (e) {
-            e.preventDefault();
-            showDownloadMessage();
-          });
-
-          // Prevent drag start
-          img.addEventListener("dragstart", function (e) {
-            e.preventDefault();
-          });
-        });
-
-        // Disable keyboard shortcuts (Ctrl+S, etc)
-        document.addEventListener("keydown", function (e) {
-          // Disable Ctrl+S (83), Ctrl+C (67), Ctrl+P (80)
-          if (
-            (e.ctrlKey || e.metaKey) &&
-            (e.keyCode === 83 || e.keyCode === 67 || e.keyCode === 80)
-          ) {
-            e.preventDefault();
-            showDownloadMessage();
-          }
-        });
-
-        // Show custom message when download attempt is made
-        function showDownloadMessage() {
-          // Remove existing message if any
-          const oldMessage = document.getElementById("downloadWarningMessage");
-          if (oldMessage) oldMessage.remove();
-
-          // Create message element
-          const message = document.createElement("div");
-          message.id = "downloadWarningMessage";
-          message.innerHTML = `
-                        <div style="
-                            position: fixed;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                            background: rgba(0,0,0,0.9);
-                            color: white;
-                            padding: 20px;
-                            border-radius: 10px;
-                            z-index: 9999;
-                            text-align: center;
-                            max-width: 80%;
-                            box-shadow: 0 0 20px rgba(0,0,0,0.5);
-                        ">
-                            <h4 style="color: #ffd700;">Family Photos Are Protected</h4>
-                            <p>Our family photos are for viewing only and not available for download.</p>
-                            <p style="font-size: 0.9em; color: #ccc;">Please respect our privacy.</p>
-                            <button onclick="this.parentNode.remove()" style="
-                                background: #4b0082;
-                                color: white;
-                                border: none;
-                                padding: 8px 15px;
-                                border-radius: 5px;
-                                margin-top: 10px;
-                                cursor: pointer;
-                            ">I Understand</button>
+        // Immediately invoked function to encapsulate all code
+        (function() {
+            // Security message function
+            function showSecurityMessage(message) {
+                const existingMsg = document.getElementById('securityMessage');
+                if (existingMsg) existingMsg.remove();
+                
+                const msgDiv = document.createElement('div');
+                msgDiv.id = 'securityMessage';
+                msgDiv.innerHTML = `
+                    <div style="
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(0,0,0,0.9);
+                        z-index: 999999;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: white;
+                        text-align: center;
+                        padding: 20px;
+                        font-family: Arial, sans-serif;
+                    ">
+                        <div>
+                            <h2 style="color: #ffd700;">Security Notice</h2>
+                            <p>${message}</p>
+                            <button onclick="this.parentNode.parentNode.remove()" 
+                                style="
+                                    background: #4b0082;
+                                    color: white;
+                                    border: none;
+                                    padding: 10px 20px;
+                                    border-radius: 5px;
+                                    margin-top: 20px;
+                                    cursor: pointer;
+                                ">
+                                I Understand
+                            </button>
                         </div>
-                    `;
-
-          document.body.appendChild(message);
-
-          // Auto-remove after 5 seconds
-          setTimeout(() => {
-            if (message.parentNode) {
-              message.remove();
+                    </div>
+                `;
+                document.body.appendChild(msgDiv);
             }
-          }, 5000);
-        }
-
-        // Prevent opening images in new tab
-        document.addEventListener("mousedown", function (e) {
-          if (e.button === 1) {
-            // Middle mouse button
-            e.preventDefault();
-          }
-        });
-      });
-      // Add this to your existing anti-download code
-      document.addEventListener("DOMContentLoaded", function () {
-        // Disable print screen key
-        document.addEventListener("keyup", function (e) {
-          if (e.key === "PrintScreen") {
-            navigator.clipboard.writeText("");
-            showDownloadMessage(
-              "Print Screen disabled - please respect our family privacy"
-            );
-          }
-        });
-
-        // Listen for print screen events (doesn't work in all browsers)
-        document.addEventListener("keydown", function (e) {
-          if (e.keyCode === 44) {
-            // Print Screen key
-            e.preventDefault();
-            return false;
-          }
-        });
-
-        // Disable dev tools (partial protection)
-        document.addEventListener("contextmenu", function (e) {
-          e.preventDefault();
-        });
-
-        // Detect dev tools opening (works in some browsers)
-        let devtools = /./;
-        devtools.toString = function () {
-          showDownloadMessage("Developer tools are disabled on this site");
-          return "";
-        };
-        console.log("%c", devtools);
-      });
-    </script>
+        
+            // Anti-tampering measures
+            function initSecurity() {
+                // Disable right-click, context menu completely
+                document.addEventListener('contextmenu', function(e) {
+                    e.preventDefault();
+                    showSecurityMessage('Right-click is disabled by intelligency team.');
+                    return false;
+                });
+        
+                // Disable keyboard shortcuts
+                document.addEventListener('keydown', function(e) {
+                    // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+                    if (e.key === 'F12' || 
+                        (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J'))) {
+                        e.preventDefault();
+                        showSecurityMessage('Developer tools are restricted by intelligency team.');
+                        return false;
+                    }
+                    
+                    // Disable Print Screen
+                    if (e.key === 'PrintScreen' || e.keyCode === 44) {
+                        e.preventDefault();
+                        navigator.clipboard.writeText('');
+                        showSecurityMessage('Screenshots are disabled to protect our family privacy.');
+                        return false;
+                    }
+                    
+                    // Disable Ctrl+S, Ctrl+C, Ctrl+P
+                    if ((e.ctrlKey || e.metaKey) && 
+                        (e.key === 's' || e.key === 'c' || e.key === 'p')) {
+                        e.preventDefault();
+                        showSecurityMessage('This action is restricted on our family website.');
+                        return false;
+                    }
+                });
+        
+                // Detect dev tools opening (works in Chrome/Firefox)
+                const devtools = new RegExp('\\{.*\\}');
+                devtools.toString = function() {
+                    showSecurityMessage('Developer tools are not allowed on this family website.');
+                    return '';
+                };
+                console.log('%c', devtools);
+                
+                // Periodically check for dev tools
+                setInterval(function() {
+                    const widthThreshold = window.outerWidth - window.innerWidth > 160;
+                    const heightThreshold = window.outerHeight - window.innerHeight > 160;
+                    
+                    if (widthThreshold || heightThreshold) {
+                        showSecurityMessage('Please close developer tools to continue viewing our family website.');
+                        document.body.innerHTML = '<h1 style="text-align:center;margin-top:50px;">This website cannot be viewed with developer tools open</h1>';
+                    }
+                }, 1000);
+        
+                // Protect images
+                const protectImages = function() {
+                    const allImages = document.querySelectorAll('img');
+                    allImages.forEach(img => {
+                        // Add transparent overlay
+                        if (!img.dataset.protected) {
+                            const overlay = document.createElement('div');
+                            overlay.style.position = 'absolute';
+                            overlay.style.top = '0';
+                            overlay.style.left = '0';
+                            overlay.style.width = '100%';
+                            overlay.style.height = '100%';
+                            overlay.style.zIndex = '1';
+                            overlay.style.cursor = 'not-allowed';
+                            
+                            img.style.userSelect = 'none';
+                            img.style.webkitUserSelect = 'none';
+                            img.draggable = false;
+                            
+                            const container = document.createElement('div');
+                            container.style.position = 'relative';
+                            container.style.display = 'inline-block';
+                            
+                            img.parentNode.insertBefore(container, img);
+                            container.appendChild(img);
+                            container.appendChild(overlay);
+                            
+                            img.dataset.protected = 'true';
+                        }
+                    });
+                };
+                
+                // Initial image protection
+                protectImages();
+                
+                // Monitor for new images (e.g., from lazy loading)
+                const observer = new MutationObserver(protectImages);
+                observer.observe(document.body, {
+                    childList: true,
+                    subtree: true
+                });
+            }
+        
+            // Contact form submission
+            document.getElementById("familyContactForm").addEventListener("submit", function(e) {
+                e.preventDefault();
+        
+                // Get form values
+                const name = document.getElementById("contactName").value;
+                const email = document.getElementById("contactEmail").value;
+                const subject = document.getElementById("contactSubject").value;
+                const message = document.getElementById("contactMessage").value;
+        
+                // Show success message
+                document.getElementById("familySuccessMessage").classList.remove("d-none");
+        
+                // Reset form
+                document.getElementById("familyContactForm").reset();
+        
+                // Scroll to success message
+                document.getElementById("familySuccessMessage").scrollIntoView({ behavior: "smooth" });
+        
+                // In a real implementation, you would send the data to your email
+                console.log("Family message would be sent to: byaruhangaisamelk@gmail.com");
+                console.log("Name:", name);
+                console.log("Email:", email);
+                console.log("Subject:", subject);
+                console.log("Message:", message);
+            });
+        
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+                anchor.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute("href")).scrollIntoView({
+                        behavior: "smooth",
+                    });
+                });
+            });
+        
+            // Initialize security when DOM is loaded
+            document.addEventListener('DOMContentLoaded', initSecurity);
+            
+            // Extra protection against iframe embedding
+            if (window.location !== window.parent.location) {
+                document.body.innerHTML = '<h1 style="text-align:center;margin-top:50px;">This family website cannot be embedded in frames</h1>';
+            }
+        })();
+        </script>
   </body>
 </html>
